@@ -1,0 +1,404 @@
+/* ========================================= MY LITTLE WORLD ♡ LUMINOUS FOREST EDITORIAL THEME ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --gold: #e8d99e;
+    --light-gold: #f5e8b5;
+    --green: #b7c68a;
+    --light-green: #d8e4d0;
+    --cream: #f0ead6;
+    --border: rgba(201,185,119,.25);
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Poppins', sans-serif;
+    --transition: .4s ease;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    color: var(--cream);
+    line-height: 1.8;
+    background: radial-gradient(circle at 20% 20%, #294d39, transparent 35%), radial-gradient(circle at 80% 70%, #1c4535, transparent 35%), linear-gradient(135deg, #071b16, #102d22, #183d2d);
+}
+
+h1, h2, h3, h4, footer h2, .logo, .scrapbook-header h2, .scrapbook-intro h3, .facts-heading h3, .about-text h3, .info-heading h3, .family-message h2, .gallery-caption h3, .family-caption h3, .category-heading h3, .contact-box h4 {
+    font-family: var(--serif);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease, filter .5s ease;
+    border: 1px solid rgba(201,185,119,.4);
+    border-radius: 10px;
+}
+
+a { color: inherit; text-decoration: none; }
+section { scroll-margin-top: 100px; }
+::selection { background: #b9c88a; color: #10281c; }
+
+main {
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 8%;
+}
+
+.section-spacing { padding: 120px 0 100px; }
+
+.eyebrow, .scrapbook-label, .intro-label {
+    color: #c5d69a;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* NAVIGATION */
+nav {
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,25,18,.95);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.logo { font: 700 2rem var(--serif); color: var(--light-gold); }
+.nav-links { display: flex; gap: 35px; }
+.nav-links a { color: #d8e5c8; font-size: .85rem; transition: var(--transition); }
+.nav-links a:hover, .explore-link:hover { color: #f3d77d; text-shadow: 0 0 12px #e6ce78; }
+
+/* HERO */
+.hero {
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0 50px;
+}
+
+.hero-text h1 {
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: .95;
+    letter-spacing: -3px;
+    color: var(--light-gold);
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(238,205,117,.25);
+}
+
+.hero-text h1 span, .intro h2 span, .section-heading h2 span, .family-message h2 span, .scrapbook-header h2 span, .scrapbook-intro h3 span, .facts-heading h3 span {
+    color: var(--green);
+    font-style: italic;
+}
+
+.hero-description { max-width: 440px; color: var(--light-green); margin-bottom: 35px; }
+.explore-link { display: inline-block; padding: 12px 0; color: var(--gold); border-bottom: 1px solid var(--green); font-size: .8rem; letter-spacing: 2px; transition: var(--transition); }
+.explore-link:hover { padding-left: 10px; }
+.hero-image img { height: 490px; }
+.image-caption { text-align: right; color: var(--light-green); font-size: .8rem; font-style: italic; margin-top: 15px; }
+
+.hero-bottom {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+    color: #c5d69a;
+    font-size: .7rem;
+    letter-spacing: 2px;
+}
+
+/* INTRODUCTION & HEADINGS */
+.intro { max-width: 900px; margin: auto; padding: 100px 0 120px; text-align: center; }
+.intro h2, .scrapbook-intro h3 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; color: var(--light-gold); margin-bottom: 25px; }
+.intro-description, .scrapbook-intro > p, .about-text p:not(.eyebrow), .personal-info > p, .family-intro, .family-message > p:not(.eyebrow) { max-width: 700px; margin: auto; color: var(--light-green); font-size: .95rem; }
+.signature { display: inline-block; margin-top: 25px; color: var(--gold); font: italic 1.3rem var(--serif); }
+
+.section-heading { margin-bottom: 55px; }
+.section-heading h2 { font-size: clamp(2.8rem, 5vw, 5rem); line-height: 1.05; color: var(--light-gold); margin-bottom: 20px; }
+.section-heading > p:last-child { color: var(--light-green); font-size: .9rem; }
+
+/* ABOUT & STORIES */
+.about-story, .scrapbook-profile { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 70px; margin-bottom: 110px; }
+.about-image img { height: 500px; }
+.about-text h3, .info-heading h3 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; color: var(--gold); margin-bottom: 25px; }
+
+/* PERSONAL INFO & UNIFIED PICTURE CARDS */
+.personal-info { padding: 70px 0; margin-bottom: 120px; border-block: 1px solid var(--border); }
+.personal-profile { display: grid; grid-template-columns: .85fr 1.15fr; align-items: stretch; gap: 35px; }
+
+.hero-image, .about-image, .gallery-item, .food-gallery, .family-item, .profile-image, .info-image {
+    padding: 18px;
+    background: rgba(255,255,255,.045);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.profile-image img, .info-image img { min-height: 350px; }
+.profile-caption { display: block; padding-top: 12px; color: var(--light-green); font: italic .9rem var(--serif); text-align: center; }
+
+.hero-image:hover, .about-image:hover, .gallery-item:hover, .food-gallery:hover, .family-item:hover, .info-image:hover, .profile-image:hover {
+    transform: translateY(-8px);
+    border-color: #d9c477;
+    box-shadow: 0 0 25px rgba(225,202,117,.2);
+    background: rgba(255,255,255,.075);
+}
+
+.hero-image img:hover, .about-image img:hover, .gallery-item img:hover, .food-gallery img:hover, .family-item img:hover, .info-image img:hover, .profile-image:hover img {
+    transform: scale(1.025);
+    filter: brightness(1.07);
+}
+
+/* PERSONAL SCRAPBOOK */
+.personal-scrapbook { position: relative; padding: 100px 0 80px; margin-bottom: 100px; overflow: hidden; }
+.scrapbook-header { position: relative; text-align: center; max-width: 700px; margin: 0 auto 75px; }
+.scrapbook-header h2 { font: 600 clamp(3rem, 6vw, 5rem) var(--serif); color: #f5e8b5; line-height: 1.1; }
+.scrapbook-header > p { max-width: 480px; margin: 20px auto 0; color: #d8e4d0; font-size: .9rem; }
+.header-flower { position: absolute; right: 5%; top: -25px; color: #e8d99e; font-size: 2.5rem; transform: rotate(20deg); }
+
+.scrapbook-photo { position: relative; padding: 15px; background: #e9e3ca; transform: rotate(-3deg); box-shadow: 0 15px 40px rgba(0,0,0,.25); transition: .5s ease; }
+.scrapbook-photo img { width: 100%; height: 420px; filter: sepia(8%); }
+.scrapbook-photo:hover { transform: rotate(0) translateY(-8px); }
+
+.photo-sticker { position: absolute; right: -20px; top: 25px; padding: 12px 18px; color: #173b2b; background: #d8e4d0; font: italic 1.1rem var(--serif); transform: rotate(8deg); box-shadow: 0 5px 15px rgba(0,0,0,.15); }
+.photo-date { display: block; text-align: center; color: #294a36; padding-top: 12px; font-size: .65rem; letter-spacing: 3px; }
+
+.scrapbook-intro { padding: 20px 0; }
+.handwritten-note { display: inline-block; margin-top: 15px; padding: 12px 18px; color: #e8d99e; border-bottom: 1px dashed #b7c68a; font: italic 1.25rem var(--serif); }
+
+.facts-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 35px; }
+.facts-heading h3 { color: #f5e8b5; font: 600 clamp(2rem, 4vw, 3.2rem) var(--serif); }
+.facts-decoration { color: #b7c68a; font-size: 3rem; }
+
+.facts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.fact-card {
+    position: relative;
+    min-height: 270px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid rgba(201,185,119,.3);
+    border-radius: 4px;
+    background: rgba(255,255,255,.045);
+    transition: .4s ease;
+}
+.fact-card:hover { transform: translateY(-8px); border-color: #d9c477; background: rgba(255,255,255,.09); box-shadow: 0 15px 35px rgba(0,0,0,.18); }
+
+.fact-top { display: flex; align-items: center; justify-content: space-between; }
+.fact-top > span:first-child { color: #b7c68a; font-size: .65rem; letter-spacing: 2px; }
+.fact-icon { color: #e8d99e; font-size: 1.5rem; }
+
+.fact-symbol { color: rgba(232,217,158,.2); font: 700 6rem var(--serif); line-height: .8; }
+.personality-symbol { color: rgba(183,198,138,.5); font-size: 5rem; }
+
+.color-display { display: flex; align-items: center; justify-content: center; height: 95px; }
+.color-display span { width: 75px; height: 75px; display: block; border-radius: 50%; background: #718b58; border: 7px solid rgba(255,255,255,.1); outline: 1px solid rgba(201,185,119,.5); box-shadow: 0 0 30px rgba(113,139,88,.3); }
+
+.fact-bottom p { color: #b7c68a; font-size: .65rem; letter-spacing: 2px; margin-bottom: 7px; }
+.fact-bottom h4 { color: #f5e8b5; font: 600 1.8rem var(--serif); margin-bottom: 5px; }
+.fact-bottom > span { color: #d8e4d0; font-size: .75rem; }
+
+.age-card { background: radial-gradient(circle at 90% 20%, rgba(183,198,138,.13), transparent 45%), rgba(255,255,255,.045); }
+.birthday-card { background: radial-gradient(circle at 90% 20%, rgba(232,217,158,.12), transparent 45%), rgba(255,255,255,.045); }
+.color-card { background: radial-gradient(circle at 90% 20%, rgba(113,139,88,.2), transparent 45%), rgba(255,255,255,.045); }
+.personality-card { background: radial-gradient(circle at 90% 20%, rgba(216,228,208,.12), transparent 45%), rgba(255,255,255,.045); }
+
+/* CLOSING MESSAGE FOOTER (Borders removed here) */
+.scrapbook-footer { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 25px; 
+    margin-top: 75px; 
+    padding: 30px 15px; 
+    border: none; /* Lines removed */
+}
+.scrapbook-footer span { color: #b7c68a; font-size: 1.5rem; }
+.scrapbook-footer p { color: #d8e4d0; font: italic 1.4rem var(--serif); text-align: center; }
+.scrapbook-footer strong { color: #e8d99e; }
+
+/* QUOTES SECTION STYLING */
+.quotes-section { margin-bottom: 120px; }
+.quote-list { border-top: 1px solid var(--border); }
+.quote-item { 
+    display: grid; 
+    grid-template-columns: 70px 1fr; 
+    gap: 20px; 
+    padding: 35px 0; 
+    border-bottom: 1px solid var(--border); 
+}
+.quote-number { 
+    color: var(--green); 
+    font-size: .8rem; 
+}
+.quote-text { 
+    font-size: clamp(1.15rem, 2.2vw, 1.35rem); 
+    font-weight: 400; 
+    font-family: var(--serif);
+    font-style: italic;
+    line-height: 1.5; 
+    color: var(--gold); 
+    margin-bottom: 10px; 
+}
+.quote-author { 
+    color: var(--green); 
+    font-size: .85rem; 
+    font-family: var(--sans);
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+/* HOBBIES, FOOD, FAMILY */
+.hobbies-section { margin-bottom: 50px; }
+.gallery-grid, .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: start; gap: 25px; }
+.gallery-item:nth-child(2) { margin-top: 60px; }
+.gallery-caption, .family-caption { padding-top: 20px; }
+.gallery-caption span, .family-caption span { color: var(--green); font-size: .7rem; letter-spacing: 2px; }
+.gallery-caption h3, .family-caption h3 { font-size: 2rem; color: var(--gold); margin: 5px 0; }
+.gallery-caption p, .family-caption p { color: #d2dfce; font-size: .85rem; }
+.gallery-item img { height: 390px; }
+
+.food-category { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; padding: 45px 0; border-top: 1px solid var(--border); }
+.category-heading span { color: var(--green); font-size: .8rem; }
+.category-heading h3 { font-size: 3rem; color: var(--gold); margin-top: 10px; }
+.category-heading p { color: #d2dfce; font-size: .85rem; }
+.food-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.food-gallery img { height: 300px; }
+
+.family-intro { max-width: 700px; color: var(--light-green); margin-bottom: 60px; }
+.family-message { max-width: 750px; margin: 130px auto 50px; padding: 70px 30px; text-align: center; border-block: 1px solid var(--border); }
+.family-message h2 { font-size: clamp(2.5rem, 5vw, 4rem); color: var(--light-gold); margin-bottom: 20px; }
+.family-item { text-align: center; }
+.family-item img { height: 260px; }
+
+/* CONTACTS SECTION STYLING */
+.contacts-section { text-align: center; }
+.contacts-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.contact-box {
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(201, 185, 119, 0.3);
+    border-radius: 12px;
+    padding: 25px 35px;
+    min-width: 260px;
+    transition: 0.4s ease;
+}
+.contact-box:hover {
+    transform: translateY(-5px);
+    border-color: #d9c477;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.contact-box h4 {
+    color: var(--green);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-value {
+    color: var(--light-gold);
+    font-size: 1.25rem;
+    font-family: var(--serif);
+}
+
+#about, #food, #family, #contacts { border-bottom: 1px solid var(--border); }
+
+/* FOOTER */
+footer { text-align: center; padding: 65px 20px 30px; background: #1d4734; border-top: 1px solid rgba(211,197,130,.3); }
+footer h2 { font-size: 2.5rem; color: #e6d79e; margin-bottom: 10px; }
+footer p { color: #c6d4b8; font-size: .85rem; }
+.footer-bottom { margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--border); font-size: .7rem; letter-spacing: 1px; }
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 900px) {
+    main { padding: 0 5%; }
+    .hero { gap: 30px; }
+    .hero-image img { height: 400px; }
+    .about-story, .scrapbook-profile { grid-template-columns: 1fr 1fr; gap: 35px; }
+    .about-image img { height: 420px; }
+    .scrapbook-photo img { height: 350px; }
+    .gallery-item img, .family-item img { height: 300px; }
+    .food-category { gap: 25px; }
+    .fact-card { min-height: 250px; }
+}
+
+@media (max-width: 600px) {
+    nav { padding: 12px 5%; }
+    .logo { font-size: 1.6rem; }
+    .nav-links { gap: 13px; }
+    .nav-links a { font-size: .7rem; }
+    main { padding: 0 6%; }
+    .section-spacing { padding: 75px 0 60px; }
+    .personal-scrapbook { padding: 75px 0 50px; margin-bottom: 60px; }
+    .scrapbook-header { margin-bottom: 55px; }
+    .header-flower { right: 0; font-size: 1.8rem; }
+    
+    .hero, .about-story, .scrapbook-profile, .gallery-grid, .family-grid, .food-category, .personal-profile {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .hero { min-height: auto; padding-top: 70px; }
+    .hero-text h1 { font-size: 4.5rem; }
+    .hero-image img, .scrapbook-photo img, .about-image img, .gallery-item img, .family-item img { height: 380px; }
+    .scrapbook-photo { max-width: 380px; margin: auto; }
+    
+    .hero-bottom { flex-direction: column; gap: 15px; font-size: .6rem; }
+    .intro { padding: 70px 0; }
+    .intro h2 { font-size: 2.8rem; }
+    .section-heading h2 { font-size: 3rem; }
+    .about-text h3 { font-size: 2.5rem; }
+    
+    .personal-info { margin-bottom: 75px; }
+    .quotes-section { margin-bottom: 80px; }
+    .quote-item { grid-template-columns: 45px 1fr; gap: 12px; }
+    
+    .family-message { margin-top: 80px; padding: 50px 15px; }
+    .hero-image, .about-image, .gallery-item, .food-gallery, .family-item { padding: 12px; }
+    .scrapbook-footer { gap: 12px; margin-top: 50px; }
+    .scrapbook-footer p { font-size: 1.1rem; }
+    footer { padding: 50px 20px 25px; }
+}
+
+@media (max-width: 380px) {
+    nav { flex-direction: column; gap: 8px; }
+    .nav-links { gap: 15px; }
+    .hero-text h1 { font-size: 3.5rem; }
+    .scrapbook-photo img { height: 280px; }
+    .fact-bottom h4 { font-size: 1.55rem; }
+    .food-gallery { gap: 10px; }
+    .food-gallery img { height: 150px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
